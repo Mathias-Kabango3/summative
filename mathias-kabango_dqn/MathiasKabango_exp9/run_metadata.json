@@ -1,0 +1,15 @@
+{
+  "env_id": "ALE/Breakout-v5",
+  "policy": "CnnPolicy",
+  "obs_type": "rgb",
+  "hyperparameters": {
+    "lr": 0.0001,
+    "gamma": 0.99,
+    "batch_size": 32,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.02,
+    "epsilon_fraction": 0.25
+  },
+  "mean_reward": 0.6666666865348816,
+  "std_reward": 0.942808985710144
+}
