@@ -116,6 +116,8 @@ The `play.py` script loads the best model and runs 20 episodes of Breakout with 
 
 Average reward over 20 episodes: **1.30**
 
+[Video link](https://youtu.be/CHynYHsX80I)
+
 To run: `python play.py`
 
 ---
