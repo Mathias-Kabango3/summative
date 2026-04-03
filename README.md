@@ -84,3 +84,6 @@ You can also force a specific model:
 python main.py --algo dqn --episodes 3
 python main.py --algo pg --episodes 3
 ```
+
+You can also run ``` play.py ``` to run the best model:
+ ``` python play.py ```
