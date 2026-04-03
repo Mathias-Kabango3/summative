@@ -4,19 +4,21 @@ Single-agent drone delivery environment on a clean grid. The drone must pick up 
 
 ## Required Project Structure
 
+```text
 project_root/
 ├── environment/
 │   ├── custom_env.py
-│   ├── rendering.py
+│   └── rendering.py
 ├── training/
 │   ├── dqn_training.py
-│   ├── pg_training.py
+│   └── pg_training.py
 ├── models/
 │   ├── dqn/
 │   └── pg/
 ├── main.py
 ├── requirements.txt
 └── README.md
+```
 
 ## Environment Highlights
 
