@@ -58,11 +58,19 @@ Train PPO (policy gradient):
 python training/pg_training.py --timesteps 2000000 --output models/pg
 ```
 
+Train REINFORCE:
+
+```bash
+python train.py --algo reinforce --episodes 2000 --out-dir models/reinforce
+```
+
 Each training script writes:
 
 - final model zip
 - best model checkpoint(s) from evaluation callback
 - metrics.json with mean reward
+
+The shared `train.py` entry point also supports `dqn` and `ppo` if you want to run the same episodic trainer for those agents.
 
 ## Run Best Performing Model
 

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 from typing import Any, Literal
 
@@ -8,6 +9,7 @@ import numpy as np
 from dqn import DQNAgent
 from ppo import PPOAgent
 from reinforce import ReinforceAgent
+from environment.custom_env import DroneDeliveryEnv, EnvConfig
 from utils import CsvLogger, EpisodeLog
 
 
@@ -96,3 +98,28 @@ def train(
 
     agent.save(str(out / f"{algo}_final.pt"))
     return rewards
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Train drone delivery agents")
+    parser.add_argument("--algo", choices=["dqn", "ppo", "reinforce"], required=True)
+    parser.add_argument("--episodes", type=int, default=500)
+    parser.add_argument("--render", action="store_true")
+    parser.add_argument("--checkpoint-every", type=int, default=25)
+    parser.add_argument("--out-dir", type=str, default="models")
+    parser.add_argument("--max-steps", type=int, default=700)
+    args = parser.parse_args()
+
+    env = DroneDeliveryEnv(EnvConfig(max_steps=args.max_steps))
+    train(
+        env=env,
+        algo=args.algo,
+        episodes=args.episodes,
+        render=args.render,
+        checkpoint_every=args.checkpoint_every,
+        out_dir=args.out_dir,
+    )
+
+
+if __name__ == "__main__":
+    main()
