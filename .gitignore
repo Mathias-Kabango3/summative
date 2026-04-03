@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.venv310/
+models/
+assets/
+.DS_Store

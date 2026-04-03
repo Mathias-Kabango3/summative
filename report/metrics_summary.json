@@ -1,0 +1,36 @@
+{
+  "convergence_episode": {
+    "DQN": 172,
+    "PPO": 250,
+    "REINFORCE": 396
+  },
+  "final_mean_reward_training": {
+    "DQN": 132.55400000000003,
+    "PPO": -77.6003,
+    "REINFORCE": -11.5305
+  },
+  "generalization": {
+    "DQN": {
+      "mean_reward": 121.15046666666579,
+      "std_reward": 45.413968279031096,
+      "mean_deliveries": 0.5666666666666667,
+      "mean_collisions": 0.0
+    },
+    "PPO": {
+      "mean_reward": -74.54999999999968,
+      "std_reward": 1.4210854715202004e-14,
+      "mean_deliveries": 0.0,
+      "mean_collisions": 0.0
+    },
+    "REINFORCE": {
+      "mean_reward": -7.677666666666682,
+      "std_reward": 6.2086738698551445,
+      "mean_deliveries": 0.0,
+      "mean_collisions": 0.0
+    }
+  },
+  "stability_points": {
+    "dqn_loss_points": 829,
+    "ppo_entropy_points": 976
+  }
+}
